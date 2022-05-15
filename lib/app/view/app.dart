@@ -27,7 +27,7 @@ class App extends StatelessWidget {
           onGenerateRoute: AppRoutes.onGenerateRoute,
           home: ScrollConfiguration(
             behavior: DisableGlowingScrollBehavior(),
-            child: child!,
+            child: child??const SizedBox.shrink(),
           ),
           debugShowCheckedModeBanner: false,
           theme: AppThemes.light,
