@@ -18,7 +18,7 @@ class TextComponent extends StatelessWidget {
     this.useTranslation = true,
     this.textParams,
     this.maxLine,
-    this.textShadow,
+    this.textShadow, this.textStyle,
   });
 
   final String textKey;
@@ -35,6 +35,7 @@ class TextComponent extends StatelessWidget {
   final double? lineHeight;
   final List<BoxShadow>? textShadow;
   final Map<String, String>? textParams;
+  final TextStyle? textStyle;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +44,7 @@ class TextComponent extends StatelessWidget {
       textAlign: textAlign ?? TextAlign.left,
       overflow: useOverFlow! ? TextOverflow.ellipsis : TextOverflow.visible,
       maxLines: maxLine,
-      style: GoogleFonts.muli(
+      style:textStyle?? GoogleFonts.inter(
           color: color ?? Colors.black,
           fontWeight: fontWeight ?? FontWeight.normal,
           height: lineHeight,

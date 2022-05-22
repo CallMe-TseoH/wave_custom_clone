@@ -29,7 +29,7 @@ class AppThemes {
         selectionHandleColor: AppColors.blue,
         cursorColor: AppColors.blue,
       ),
-      fontFamily: GoogleFonts.muli().fontFamily,
+      fontFamily: GoogleFonts.inter().fontFamily,
       colorScheme: ColorScheme.fromSwatch(
         accentColor: AppColors.blue,
       ),

@@ -1,0 +1,1 @@
+enum TransactionTypeEnum{transfer, deposit, withdrawn, all}

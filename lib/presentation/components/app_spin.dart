@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wave_custom_clone/config/theme/theme.dart' show AppColors;
 
 class AppSpin extends StatelessWidget {
   const AppSpin({
@@ -9,7 +10,7 @@ class AppSpin extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: CircularProgressIndicator.adaptive(
-        valueColor: AlwaysStoppedAnimation(color??Theme.of(context).colorScheme.secondary),
+        valueColor: AlwaysStoppedAnimation(color??AppColors.purplishBlue),
       ),
     );
   }

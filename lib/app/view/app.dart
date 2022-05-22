@@ -12,6 +12,7 @@ import 'package:wave_custom_clone/config/behaviors/behaviors.dart' show DisableG
 import 'package:wave_custom_clone/config/routes/routes.dart';
 import 'package:wave_custom_clone/config/theme/theme.dart' show AppThemes;
 import 'package:wave_custom_clone/l10n/l10n.dart';
+import 'package:wave_custom_clone/presentation/home/home.dart';
 import 'package:wave_custom_clone/presentation/security/security.dart';
 
 class App extends StatelessWidget {
@@ -25,9 +26,9 @@ class App extends StatelessWidget {
       builder: (Widget? child) {
         return MaterialApp(
           onGenerateRoute: AppRoutes.onGenerateRoute,
-          home: ScrollConfiguration(
+          builder: (_, widget)=>ScrollConfiguration(
             behavior: DisableGlowingScrollBehavior(),
-            child: child??const SizedBox.shrink(),
+            child: widget!,
           ),
           debugShowCheckedModeBanner: false,
           theme: AppThemes.light,

@@ -22,10 +22,10 @@ class SecurityView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Padding(
-                padding: EdgeInsets.only(top: SizesHelper.height(30)),
+                padding: EdgeInsets.only(top: SizesHelper.height(40)),
                 child: Image.asset(
                   Assets.images.waveLogo.path,
-                  height: SizesHelper.height(65),
+                  height: SizesHelper.height(90),
                 ),
               ),
               const SecurityPinField(),
