@@ -7,7 +7,7 @@ class TransactionRepositoryImpl extends TransactionRepository{
 
   @override
   Future<List<TransactionEntity>> getTransactions() async {
-    return Future.delayed(const Duration(seconds: 10), (){
+    return Future.delayed(const Duration(seconds: 5), (){
       return _waveApiSource.getTransactions().then((value){
         return value.map((e) => e.toEntity()).toList();
       });
